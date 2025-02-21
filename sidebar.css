@@ -1,0 +1,105 @@
+body{
+    display: flex;
+    margin: 0;
+}
+p{
+    font-family: "Quicksand", arial,sans-serif;
+}
+h3{
+    font-family:"roboto slab" serif;
+}
+.first-section>img{
+    width: 150px;
+    border-radius: 50%;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    object-fit: cover;
+}
+ul{
+    list-style: none;
+    text-align: center;
+    padding: 8px 0;
+}
+a{
+    text-decoration: none;
+    color: black;
+    font-family: "roboto";
+    line-height: 35px;
+    color: rgb(38, 38, 38);
+}
+.name{
+    position: relative;
+    padding: 0 0 5px;
+    margin: 0 0 8px;
+}
+.header{
+    position: fixed;
+    width: 290px;
+    height: 765px;
+    background-color: #e0e0e0ad;
+    margin: 10px 10px -26px 10px;
+    border-radius: 70px;
+    text-align: center;
+    background-image: linear-gradient(0deg, #d3d3d36b, #ffffffc6);
+}
+.name>h3{
+    margin: 0;
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+.name>p{
+    margin-top: 6px;
+    color: rgb(68, 67, 67);
+}
+.icon{
+    word-spacing: 13px;
+}
+
+.first-section{
+    text-align: center;
+    border-radius: 54px;
+}
+.info{
+    margin-bottom: 90px;
+    letter-spacing: 1px;
+}
+.icon>a>i{
+    position: relative;
+    font-size: 18px;
+    background-color: rgb(255, 255, 255);
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 28px;
+    box-shadow: 1px 1px 3px gray;
+    transition: .7s;
+} 
+.icon>a>i:hover{
+    cursor: pointer;
+    transform: translate(0, -10px);
+}
+.icon>a> .fa-brands:hover{
+    background-color: black;
+    color: white;
+}
+ul>li> a {
+    position: relative;
+    text-decoration: none;
+}
+ul>li>a::before {
+    content: ''; 
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 0%;
+    height: 3px;
+    background-color: black;
+    transition: all 0.5s ease;
+}
+ul>li>a:hover::before {
+    width: 100%;
+}
+ul>li>a{
+    font-family: "Quicksand", arial,sans-serif;
+}
