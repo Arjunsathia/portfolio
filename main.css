@@ -1,73 +1,79 @@
-p{
-    font-family: "Quicksand", arial,sans-serif;
+body {
+  background-color: #e5e5e5;
 }
-.personal>h1{
-    font-size: 50px;
-    color: rgb(23, 23, 23);
-    word-spacing: -3px;
-    letter-spacing: 9px;
-    line-height: 71px;
-    margin: 0;
+
+p {
+  font-family: "Quicksand", arial, sans-serif;
 }
-.personal>p{
-    margin: 0;
-    margin-top: 10px;
-    margin-bottom: 20px;
-    font-size: 20px;
-    word-spacing: 6px;
-    letter-spacing: 3px;
-    margin-left: 11px;
-    color: rgb(68, 67, 67);
-    font-family: "Quicksand", arial, sans-serif;
+.personal > h1 {
+  font-size: 50px;
+  color: rgb(23, 23, 23);
+  word-spacing: -3px;
+  letter-spacing: 9px;
+  line-height: 71px;
+  margin: 0;
 }
-#hi{
-    font-family: "roboto slab" serif;
-    font-weight: normal;
+.personal > p {
+  margin: 0;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  font-size: 20px;
+  word-spacing: 6px;
+  letter-spacing: 3px;
+  margin-left: 11px;
+  color: rgb(68, 67, 67);
+  font-family: "Quicksand", arial, sans-serif;
 }
-#aj{
-    color: darkslategrey;
+#hi {
+  font-family: "roboto slab" serif;
+  font-weight: normal;
 }
-#full{
-    color: darkslategrey;
+#aj {
+  color: darkslategrey;
 }
-.condainer{
-    margin-left: 260px;
-    width: 100%;
-    text-align: justify;
-    overflow: auto;
-    padding: 30px 60px 0px 120px;
+#full {
+  color: darkslategrey;
 }
-#home{
-    height: 900px;
+.condainer {
+  margin-left: 260px;
+  width: 100%;
+  text-align: justify;
+  overflow: auto;
+  padding: 30px 60px 0px 120px;
 }
-.personal{
-    margin-top: 100px;
+#home {
+  height: 900px;
 }
-.button{
-    font-size: small;
-    font-family: 'Quicksand';
-    background: white;
-    border: 1px solid;
-    padding: 4px;
-    margin-left: 13px;
+.personal {
+  margin-top: 100px;
 }
-.abt-me>p{
-    text-align: start;
-    padding: 12px 285px 0 13px
+.button {
+  font-size: small;
+  font-family: "Quicksand";
+  background-color: #2f4f4fd4;
+  border: none;
+  padding: 4px;
+  margin-left: 13px;
+  color: white;
+  border-radius: 6px;
 }
-.abt-me>p{
-    word-spacing: 4px;
-    line-height: 32px;
+.abt-me > p {
+  text-align: start;
+  padding: 12px 285px 0 13px;
 }
-.abt-me>h4{
-    letter-spacing: 6px;
-    margin: 0 0 50px 12px;
+.abt-me > p {
+  word-spacing: 4px;
+  line-height: 32px;
 }
-#me{
-    color: rgba(0, 0, 0, 0.64);
-    letter-spacing: 5px;
-    font-size: x-small;
+.abt-me > h4 {
+  letter-spacing: 6px;
+  margin: 0 0 50px 12px;
 }
-.abt-me>p>span{
-    font-weight: 700;
+#me {
+  color: rgba(0, 0, 0, 0.64);
+  letter-spacing: 5px;
+  font-size: x-small;
+}
+.abt-me > p > span {
+  font-weight: 700;
 }
