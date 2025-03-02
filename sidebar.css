@@ -93,8 +93,8 @@ ul > li > a::before {
   bottom: -10px;
   left: 0;
   width: 0%;
-  height: 3px;
-  background-color: black;
+  height: 1px;
+  background-color: rgb(146, 146, 146);
   transition: all 0.5s ease;
 }
 ul > li > a:hover::before {
