@@ -41,11 +41,12 @@ p {
   overflow: auto;
   padding: 30px 60px 0px 120px;
 }
-#home {
+/* #home {
   height: 900px;
-}
+} */
 .personal {
-  margin-top: 100px;
+  margin-top: 0 auto;
+  text-align: center;
 }
 .button {
   font-size: small;

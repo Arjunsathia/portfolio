@@ -1,0 +1,278 @@
+/* === Sidebar Layout === */
+.header {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  width: 260px;
+  height: calc(100vh - 20px);
+  border-radius: 30px;
+  background: var(--bg-glass, rgba(255, 255, 255, 0.85));
+  box-shadow: var(--shadow-lg, 0 8px 32px 0 rgba(31, 38, 135, 0.15));
+  z-index: 9999;
+  overflow-y: hidden;
+  padding: 20px 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin: 0;
+  border-right: 1px solid var(--glass-border, rgba(255, 255, 255, 0.18));
+  text-align: center;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+/* === Profile Image & Status === */
+.image-wrapper {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+.header img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: var(--shadow-md, 0 10px 25px rgba(0,0,0,0.1));
+  transition: transform 0.3s ease;
+}
+
+.header img:hover {
+  transform: scale(1.05);
+}
+
+.status-badge {
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: white;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 10px;
+  font-weight: 700;
+  color: var(--accent-color, #10b981);
+  box-shadow: var(--shadow-sm, 0 4px 10px rgba(0,0,0,0.08));
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+.pulse {
+  width: 6px;
+  height: 6px;
+  background-color: var(--accent-color, #10b981);
+  border-radius: 50%;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7); }
+  70% { box-shadow: 0 0 0 6px rgba(16, 185, 129, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); }
+}
+
+/* === Name and Title === */
+.name {
+  margin: 10px 0 15px 0;
+}
+.name h3 {
+  font-family: "Playfair Display", serif;
+  margin: 0;
+  font-size: 26px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  color: var(--primary-color, #1a1a1a);
+}
+.name p {
+  font-family: "Outfit", sans-serif;
+  margin: 4px 0 0;
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--text-muted, #888);
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+
+/* === Navigation Links === */
+.info {
+  width: 100%;
+}
+.sidebar-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  align-items: center;
+  width: 100%;
+}
+.sidebar-links li {
+  margin: 0;
+  padding: 0;
+  width: 90%;
+  opacity: 0;
+  animation: slideIn 0.5s forwards;
+}
+
+@keyframes slideIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.sidebar-links a {
+  display: block;
+  text-decoration: none;
+  color: var(--text-muted, #555);
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 10px 20px;
+  border-radius: 12px;
+  transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  letter-spacing: 0.5px;
+}
+
+.sidebar-links a:hover,
+.sidebar-links a.active {
+  color: var(--primary-color, #000);
+  background-color: rgba(255, 255, 255, 0.95);
+  box-shadow: var(--shadow-sm, 0 4px 15px rgba(0, 0, 0, 0.08));
+  transform: translateY(-2px) scale(1.02);
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.sidebar-links a.active {
+  background: linear-gradient(90deg, #fff 0%, #f8f9fa 100%);
+  border-left: 3px solid var(--primary-color, #1a1a1a);
+  border-radius: 8px 12px 12px 8px;
+}
+
+.sidebar-links a::before {
+  display: none;
+}
+
+/* === Bottom Section (Icons + CTA) === */
+.bottom-section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  margin-top: auto;
+  padding-bottom: 10px;
+}
+
+.icon {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin: 0;
+}
+.icon a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: white;
+  color: var(--text-muted, #555);
+  box-shadow: var(--shadow-sm, 0 2px 5px rgba(0,0,0,0.05));
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.icon a svg {
+  font-size: 16px;
+}
+
+.icon a:hover {
+  transform: translateY(-3px);
+  color: white !important;
+}
+
+/* CTA Button */
+.cta-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--primary-color, #1a1a1a);
+  color: white;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 12px 28px;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  box-shadow: var(--shadow-md, 0 4px 15px rgba(0,0,0,0.2));
+  letter-spacing: 0.5px;
+  margin-top: 10px;
+}
+
+.cta-button:hover {
+  background: black;
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: var(--shadow-lg, 0 8px 25px rgba(0,0,0,0.3));
+  color: white;
+}
+
+/* Brand Colors on Hover */
+.icon a.facebook:hover {
+  background-color: #3b5998;
+  box-shadow: 0 4px 10px rgba(59, 89, 152, 0.4);
+}
+
+.icon a.twitter:hover {
+  background-color: #000000;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+.icon a.instagram:hover {
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+  box-shadow: 0 4px 10px rgba(214, 36, 159, 0.4);
+}
+
+.icon a.linkedin:hover {
+  background-color: #0077b5;
+  box-shadow: 0 4px 10px rgba(0, 119, 181, 0.4);
+}
+
+.icon a.github:hover {
+  background-color: #333;
+  box-shadow: 0 4px 10px rgba(51, 51, 51, 0.4);
+}
+
+/* === Toggle Button (Mobile) === */
+.toggle-button {
+  background: none;
+  border: none;
+  color: black;
+  font-size: 24px;
+  transition: transform 0.3s ease;
+}
+.toggle-button:focus {
+  outline: none;
+}
+
+/* === Responsive - Mobile View === */
+@media (max-width: 768px) {
+  .header {
+    display: none;
+  }
+
+  .main-content {
+    margin-left: 0 !important;
+    padding: 20px !important;
+  }
+}
