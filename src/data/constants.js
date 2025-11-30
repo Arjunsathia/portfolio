@@ -3,7 +3,7 @@ export const navLinks = [
   "Home",
   "About",
   "Services",
-  "Skill",
+  "Skills",
   "Experience",
   "Work",
   "Blog",
